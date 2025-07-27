@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - MovieMania</title>
+  <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+  <!--header-->
+  {% include '/includes/header.html' %}
+
+    <!--dynamic content-->
+    {% block content %}
+    {% endblock %}
+
+  <!--footer-->
+  {% include '/includes/footer.html' %}
+  
+</body>
+</html>

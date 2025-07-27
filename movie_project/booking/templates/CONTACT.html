@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="contact-container">
+    <h1>Contact Us</h1>
+    <p>We're here to help you with bookings, feedback, or any questions you might have. Reach out to us!</p>
+
+    <div class="contact-details">
+      <h3>📌 Why Contact Us?</h3>
+      <ul>
+        <li>To resolve booking-related issues</li>
+        <li>For partnership and sponsorship inquiries</li>
+        <li>For feedback or suggestions to improve our services</li>
+        <li>To report any technical problems</li>
+      </ul>
+
+      <h3>📞 Contact Options</h3>
+      <p>Email: support@moviemania.com</p>
+      <p>Phone: +91 98725 42634</p>
+      <p>WhatsApp: +91 90660 12345</p>
+
+      <h3>🕒 Business Hours</h3>
+      <p>Monday to Friday: 9 AM – 7 PM</p>
+      <p>Saturday: 10 AM – 5 PM</p>
+      <p>Sunday: Closed</p>
+
+      <h3>📍 Our Office</h3>
+      <p>MovieMania Pvt. Ltd.<br>
+         No. 123, Cine City Street,<br>
+         Melapalayam, Tirunelveli - 600024<br>
+         India</p>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+ {% endblock %}

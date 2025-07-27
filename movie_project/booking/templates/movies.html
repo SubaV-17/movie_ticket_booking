@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h2 class="heading">NOW SHOWING - BOOK TODAY</h2>
+  
+  <div class="movie-container">
+    <!-- Movie Card -->
+    <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/GBU',
+      name: 'Good Bad Ugly',
+      duration: '2h 15m',
+      language: 'Tamil',
+      type: '2D, A',
+      description: 'A beautiful romantic story set in war time.'
+    })" style="cursor:pointer;">
+      <div class="tag">Advance Booking</div>
+      <img src="images/GBU" alt="Andaz Apna Apna">
+      <h3>Good Bad Ugly</h3>
+      <p class="duration">2h 40m</p>
+      <div class="tags">
+        <span class="badge">2D</span>
+        <span class="badge">U</span>
+      </div>
+      <p class="lang">Tamil</p>
+    </div>
+
+    <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/sitaram.jpg',
+      name: 'SitaRam',
+      duration: '2h 15m',
+      language: 'Tamil',
+      type: '2D, A',
+      description: 'A beautiful romantic story set in war time.'
+    })" style="cursor:pointer;">
+      <img src="images/sitaram.jpg" alt="SitaRam">
+      <h3>SitaRam</h3>
+      <p class="duration">2h 15m</p>
+      <div class="tags">
+        <span class="badge">2D</span>
+        <span class="badge">A</span>
+      </div>
+      <p class="lang">Tamil</p>
+    </div>
+
+    <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/tharunam',
+      name: 'Tharunam',
+      duration: '2h 15m',
+      language: 'Tamil',
+      type: '2D, A',
+      description: 'A beautiful romantic story set in war time.'
+    })" style="cursor:pointer;">
+      <img src="images/tharunam" alt="Paddington in Peru">
+      <h3>Tharunam</h3>
+      <p class="duration">1h 47m</p>
+      <div class="tags">
+        <span class="badge">2D</span>
+        <span class="badge">U</span>
+      </div>
+      <p class="lang">English</p>
+    </div>
+
+    <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/maharaja-2024.jpg',
+      name: 'Maharaja',
+      duration: '2h 15m',
+      language: 'Tamil',
+      type: '2D, A',
+      description: 'A beautiful romantic story set in war time.'
+    })" style="cursor:pointer;">
+        <img src="images/maharaja-2024.jpg" alt="Kesari Chapter 2">
+        <h3>Maharaja</h3>
+        <p class="duration">2h 15m</p>
+        <div class="tags">
+          <span class="badge">2D</span>
+          <span class="badge">A</span>
+        </div>
+        <p class="lang">Hindi</p>
+      </div>
+  
+      <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/amaran.jpeg',
+      name: 'Amaran',
+      duration: '2h 15m',
+      language: 'Tamil',
+      type: '2D, A',
+      description: 'A beautiful romantic story set in war time.'
+    })" style="cursor:pointer;">
+        <img src="images/amaran.jpeg" alt="Paddington in Peru">
+        <h3>Amaran</h3>
+        <p class="duration">1h 47m</p>
+        <div class="tags">
+          <span class="badge">2D</span>
+          <span class="badge">U</span>
+        </div>
+        <p class="lang">Telugu</p>
+      </div>
+
+      <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/leo.jpeg',
+      name: 'LEO',
+      duration: '2h 30m',
+      language: 'Hindi',
+      type: '2D, A',
+      description: 'A mass action thriller starring Vijay.'
+    })" style="cursor:pointer;">
+      <img src="images/leo.jpeg" alt="LEO">
+        <h3>LEO</h3>
+        <p class="duration">2h 15m</p>
+        <div class="tags">
+          <span class="badge">2D</span>
+          <span class="badge">A</span>
+        </div>
+        <p class="lang">Hindi</p>
+      </div>
+  
+      <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/dragon.jpg',
+      name: 'Dragon',
+      duration: '1h 47m',
+      language: 'English',
+      type: '2D, U',
+      description: 'An epic fantasy adventure with dragons and warriors.'
+    })" style="cursor:pointer;">
+      <img src="images/dragon.jpg" alt="Dragon">
+        <h3>Dragon</h3>
+        <p class="duration">1h 47m</p>
+        <div class="tags">
+          <span class="badge">2D</span>
+          <span class="badge">U</span>
+        </div>
+        <p class="lang">English</p>
+      </div>
+
+      <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/sitaram.jpg',
+      name: 'SitaRam',
+      duration: '2h 15m',
+      language: 'Tamil',
+      type: '2D, A',
+      description: 'A beautiful romantic story set in war time.'
+    })" style="cursor:pointer;">
+        <img src="images/sitaram.jpg" alt="Kesari Chapter 2">
+        <h3>SITA RAM</h3>
+        <p class="duration">2h 15m</p>
+        <div class="tags">
+          <span class="badge">2D</span>
+          <span class="badge">A</span>
+        </div>
+        <p class="lang">Hindi</p>
+      </div>
+  
+      <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/GBU',
+      name: 'Good Bad Ugly',
+      duration: '2h 15m',
+      language: 'Tamil',
+      type: '2D, A',
+      description: 'A beautiful romantic story set in war time.'
+    })" style="cursor:pointer;">
+        <img src="images/GBU" alt="Paddington in Peru">
+        <h3>PADDINGTON IN PERU</h3>
+        <p class="duration">1h 47m</p>
+        <div class="tags">
+          <span class="badge">2D</span>
+          <span class="badge">U</span>
+        </div>
+        <p class="lang">English</p>
+      </div>
+
+      <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/dragon.jpg',
+      name: 'Dragon',
+      duration: '2h 15m',
+      language: 'Tamil',
+      type: '2D, A',
+      description: 'A beautiful romantic story set in war time.'
+    })" style="cursor:pointer;">>
+        <img src="images/dragon.jpg" alt="Paddington in Peru">
+        <h3>Dragon</h3>
+        <p class="duration">1h 47m</p>
+        <div class="tags">
+          <span class="badge">2D</span>
+          <span class="badge">U</span>
+        </div>
+        <p class="lang">English</p>
+      </div>
+
+      <div class="movie-card" onclick="showMovieDetails({
+      image: 'images/sitaram.jpg',
+      name: 'SitaRam',
+      duration: '2h 15m',
+      language: 'Tamil',
+      type: '2D, A',
+      description: 'A beautiful romantic story set in war time.'
+    })" style="cursor:pointer;">
+        <img src="images/sitaram.jpg" alt="Kesari Chapter 2">
+        <h3>SITARAM</h3>
+        <p class="duration">2h 15m</p>
+        <div class="tags">
+          <span class="badge">2D</span>
+          <span class="badge">A</span>
+        </div>
+        <p class="lang">Hindi</p>
+      </div>
+
+    <!-- Add more movie cards as needed -->
+  </div>
+  <script>
+   
+    function showMovieDetails(movie) {
+    const url = new URL('movie-detail.html', window.location.href);
+    url.searchParams.set("data", encodeURIComponent(JSON.stringify(movie)));
+    window.location.href = url.href;
+  }
+  </script>
+{% endblock %}

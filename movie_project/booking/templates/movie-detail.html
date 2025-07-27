@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🎬 MovieTime</div>
+    <ul class="nav-links">
+      <li><a href="mymoviesample.html">Home</a></li>
+      <li><a href="#">Now Showing</a></li>
+      <li><a href="#">Upcoming</a></li>
+      <li><a href="CONTACT.html">Contact</a></li>
+      <li><a href="index.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="movie-detail-container">
+    <div class="poster">
+      <img id="movie-img" src="" alt="Poster">
+    </div>
+    <div class="movie-info">
+      <h1 id="movie-title">Title</h1>
+      <p class="rating" id="movie-meta">Duration • Language • Type</p>
+      <div class="tags" id="movie-tags"></div>
+      <a id="bookLink" href="seat.html"><button class="book-btn">Book Now</button></a>
+    </div>
+  </div>
+
+  <div class="about-movie">
+    <h2>About the Movie</h2>
+    <p id="movie-desc">Movie description goes here.</p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const movieData = JSON.parse(decodeURIComponent(params.get("data")));
+    document.getElementById("movie-img").src = movieData.image;
+    document.getElementById("movie-title").textContent = movieData.name;
+    document.getElementById("movie-meta").textContent = `${movieData.duration} • ${movieData.language} • ${movieData.type}`;
+    document.getElementById("movie-desc").textContent = movieData.description;
+    document.getElementById("bookLink").href = "seat.html?data=" + encodeURIComponent(JSON.stringify(movie));
+  </script>
+
+</body>
+</html>

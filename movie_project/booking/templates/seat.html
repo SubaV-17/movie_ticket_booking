@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="seat-background"></div>
+  <h1>🎬 Book Your Seat</h1>
+
+  <div class="movie-container" id="movie">
+  </div>
+
+  <div class="container" id="seat-container"></div>
+
+  <div class="legend">
+    <div><div class="box available"></div> Available</div>
+    <div><div class="box selected-box"></div> Selected</div>
+    <div><div class="box booked-box"></div> Booked</div>
+  </div>
+
+  <div class="summary">
+    <p>Selected Seats: <span id="count">0</span></p>
+    <p>Total Price: ₹<span id="total">0</span></p>
+  </div>
+
+  <a href="thankyou.html">
+  <button class="book-btn">Pay Now</button>
+</a>
+
+
+  <script>
+    const seatContainer = document.getElementById('seat-container');
+    const count = document.getElementById('count');
+    const total = document.getElementById('total');
+    const movieSelect = document.getElementById('movie');
+
+    const rows = 10;
+    const cols = 12;
+
+    let ticketPrice = +movieSelect.value;
+
+    // Generate seats
+    for (let i = 0; i < rows * cols; i++) {
+      const seat = document.createElement('div');
+      seat.classList.add('seat');
+      
+      // Simulate some seats as already booked
+      if (Math.random() < 0.1) {
+        seat.classList.add('booked');
+      }
+
+      seatContainer.appendChild(seat);
+    }
+
+    function updateSummary() {
+      const selectedSeats = document.querySelectorAll('.seat.selected');
+      const selectedCount = selectedSeats.length;
+      count.innerText = selectedCount;
+      total.innerText = selectedCount * 200;
+    }
+
+    // Click event for selecting seats
+    seatContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('seat') && !e.target.classList.contains('booked')) {
+        e.target.classList.toggle('selected');
+        updateSummary();
+      }
+    });
+
+    // Change event for movie selection
+    movieSelect.addEventListener('change', (e) => {
+      ticketPrice = +e.target.value;
+      updateSummary();
+    });
+
+    function payNow() {
+      const selected = document.querySelectorAll('.seat.selected');
+      if (selected.length === 0) {
+        alert("Please select at least one seat.");
+        return;
+      }
+      alert(`You have booked ${selected.length} seat(s) for ₹${selected.length * 200}`);
+    }
+  </script>
+
+{% endblock %}
